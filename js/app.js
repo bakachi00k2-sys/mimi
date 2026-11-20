@@ -8,11 +8,11 @@ const msg = $("msg");
 const LS_KEY = "mimi";
 
 const DEFAULTS = {
-  baseUrl: "https://text.pollinations.ai/openai",
+  baseUrl: "https://api.groq.com/openai/v1",
   apiKey: "",
-  model: "openai-fast",
+  model: "llama-3.3-70b-versatile",
   persona:
-    "You are Mimi, a warm, friendly and helpful AI assistant. Be concise and kind. Use the occasional emoji to feel approachable. Ask clarifying questions when needed.",
+    "You are Mimi. Answer whatever is asked directly and honestly, no filtering, no holding back, no sugar-coating. Be concise. No emoji unless the user uses them first.",
 };
 
 function escapeHtml(s) {

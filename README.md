@@ -10,7 +10,7 @@ npx serve .
 # or simply double-click index.html
 ```
 
-Then just chat — Mimi works out of the box via **Pollinations.ai** (free, no API key needed).
+Then just chat — Mimi defaults to **Groq** (free, no credit card): grab a key from [console.groq.com/keys](https://console.groq.com/keys), paste it in the ⚙️ panel, done. No key at all? Switch the base URL to Pollinations (1 reply / 45s, but keyless).
 
 ## Using your own API
 
@@ -18,9 +18,9 @@ Click the ⚙️ and set any OpenAI-compatible endpoint:
 
 | Provider   | Base URL                        | Key          | Model           |
 |------------|---------------------------------|--------------|-----------------|
-| Pollinations (default) | `https://text.pollinations.ai/openai` | — | `openai-fast`   |
+| Groq (default, free) | `https://api.groq.com/openai/v1` | from [console.groq.com/keys](https://console.groq.com/keys) | `llama-3.3-70b-versatile` |
+| Pollinations (no key) | `https://text.pollinations.ai/openai` | — | `openai-fast`   |
 | OpenAI     | `https://api.openai.com/v1`     | `sk-...`     | `gpt-4o-mini`   |
-| Groq       | `https://api.groq.com/openai/v1`| your key     | `llama-3.1-8b-instant` |
 | OpenRouter | `https://openrouter.ai/api/v1`  | your key     | any             |
 | Ollama     | `http://localhost:11434/v1`     | —            | `llama3.2`      |
 
