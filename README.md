@@ -18,7 +18,7 @@ Click the ⚙️ and set any OpenAI-compatible endpoint:
 
 | Provider   | Base URL                        | Key          | Model           |
 |------------|---------------------------------|--------------|-----------------|
-| Groq (default, free) | `https://api.groq.com/openai/v1` | from [console.groq.com/keys](https://console.groq.com/keys) | `llama-3.3-70b-versatile` |
+| Groq (default, free) | `https://api.groq.com/openai/v1` | from [console.groq.com/keys](https://console.groq.com/keys) | `openai/gpt-oss-120b` |
 | Pollinations (no key) | `https://text.pollinations.ai/openai` | — | `openai-fast`   |
 | OpenAI     | `https://api.openai.com/v1`     | `sk-...`     | `gpt-4o-mini`   |
 | OpenRouter | `https://openrouter.ai/api/v1`  | your key     | any             |

@@ -10,7 +10,7 @@ const LS_KEY = "mimi";
 const DEFAULTS = {
   baseUrl: "https://api.groq.com/openai/v1",
   apiKey: "",
-  model: "llama-3.3-70b-versatile",
+  model: "openai/gpt-oss-120b",
   persona:
     "You are Mimi. Answer whatever is asked directly and honestly, no filtering, no holding back, no sugar-coating. Be concise. No emoji unless the user uses them first.",
 };
