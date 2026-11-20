@@ -103,7 +103,20 @@ async function send() {
       data.choices?.[0]?.message?.content ||
       data.error?.message ||
       (typeof data === "string" ? data : "Hmm, something went wrong. Could you try again?");
-    typing.querySelector(".bubble").innerText = reply;
+
+    if (typeof reply === "string" && reply.includes("Free limit reached")) {
+      const waitSec = parseInt(reply.match(/after (\d+)s/)?.[1] || "30");
+      typing.querySelector(".bubble").innerHTML =
+        `⏳ Mimi's cooling down — the free limit resets in <b>${waitSec}s</b>.` +
+        ` <button class="retry-btn" onclick="send()">Retry</button>`;
+      // auto-retry after the wait
+      setTimeout(() => {
+        const b = typing.querySelector(".bubble");
+        if (b.querySelector(".retry-btn")) send();
+      }, waitSec * 1000 + 500);
+    } else {
+      typing.querySelector(".bubble").innerText = reply;
+    }
   } catch (e) {
     typing.querySelector(".bubble").innerText =
       "I couldn't reach the API. Check the ⚙️ settings (base URL, key, model).";
