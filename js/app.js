@@ -126,6 +126,15 @@ async function send() {
   save();
 }
 
+function resetDefaults() {
+  const key = $("apiKey").value;
+  Object.entries(DEFAULTS).forEach(([k, v]) => { $(k).value = v; });
+  $("apiKey").value = key;
+  chat.innerHTML = "";
+  bubble("mimi", "Fresh start! I'm back to my defaults — Groq, no rate limits. What's up? 🌸");
+  togglePanel();
+}
+
 msg.addEventListener("keydown", (e) => {
   if (e.key === "Enter") send();
 });

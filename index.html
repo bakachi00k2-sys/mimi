@@ -36,7 +36,10 @@
     <input id="model" />
     <label>Mimi's personality (system prompt)</label>
     <textarea id="persona" rows="4"></textarea>
-    <button class="close" onclick="togglePanel()">Done</button>
+    <div style="display:flex;gap:8px">
+      <button class="close" onclick="togglePanel()">Done</button>
+      <button class="close" style="background:var(--card2);color:var(--muted)" onclick="resetDefaults()">Reset to defaults</button>
+    </div>
     <div class="hint">Works with any OpenAI-compatible API. Default: Groq (free, 14,400 req/day). Paste your key from <a href="https://console.groq.com/keys" style="color:var(--mimi)">console.groq.com/keys</a>. For Pollinations (no key) set base URL to <code>https://text.pollinations.ai/openai</code>, model <code>openai-fast</code>, leave key blank.</div>
   </div>
 </div>
